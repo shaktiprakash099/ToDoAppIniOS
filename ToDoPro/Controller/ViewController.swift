@@ -41,13 +41,10 @@ class ViewController: UIViewController {
     
     func initialSetups(){
        
-     self.datedisplayLabel.text = DateMonthHelper().currentdateString()
+     self.datedisplayLabel.text = DateMonthHelper().getcurrentdateString()
      self.quatationLabel.text = Quotes().getRandomQuatoes()
         
     }
-    
-
-    
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)

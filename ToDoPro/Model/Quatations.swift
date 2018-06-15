@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Quatations  {
+fileprivate struct Quatations  {
     let text : String
     static func allQuatations() ->[Quatations]{
         let lists = [
@@ -27,7 +27,6 @@ struct Quatations  {
 
 class Quotes{
 
-    
     func getRandomQuatoes() -> String{
         let allquotes = Quatations.allQuatations()
         let randomQuotes: Quatations = allquotes[Int(arc4random_uniform(UInt32(allquotes.count)))];
