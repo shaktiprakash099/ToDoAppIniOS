@@ -110,10 +110,12 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDataSource,U
     
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if taskcategory.count > 0 {
         let visibleRect = CGRect(origin: self.taskCollectionView.contentOffset, size: self.taskCollectionView.bounds.size)
         let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
         let visibleIndexPath = self.taskCollectionView.indexPathForItem(at: visiblePoint)
-        self.backgroundview.updatebackgroundcolor(indexno: (visibleIndexPath?.row)!)
+        self.backgroundview.updatebackgroundcolor(indexno: (visibleIndexPath?.row) ?? 0)
+        }
     }
     }
     
